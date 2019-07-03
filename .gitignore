@@ -39,3 +39,7 @@ rsconnect/
 # list of users
 user_list.csv
 
+# output folder
+data/output
+
+
