@@ -112,7 +112,7 @@ server <- function(input, output, session) {
   
   # select locations --------------------------------------------------------
     selections <- callModule(selectMod, id="test-mod", leafmap=m)
-    output$selected <- DT::renderDataTable({DT::datatable(locations@data[as.numeric(selections()$id),c(1:4)],
+    output$selected <- DT::renderDataTable({DT::datatable(locations@data[as.numeric(selections()$id),c(1:4)], # last part here select columns from location table to be displayed
                                                           rownames= FALSE)})
 
   # Select occurrences --------------------------------------
@@ -136,6 +136,7 @@ server <- function(input, output, session) {
     if (!is.null(input$hot)) {
       DF = hot_to_r(input$hot)
     } else {
+      # edit this section to add more parameters in occurrence data...... 
       DF = data.frame(scientificName = factor(taxon_list$ScientificName),
                       occurrenceStatus = factor(rep("uncertain",length(taxon_list$ScientificName)), levels=c("uncertain","present","absent")),
                       establishmentMeans = factor(rep("native", length(taxon_list$ScientificName)), levels=c("native","introduced","uncertain")),
