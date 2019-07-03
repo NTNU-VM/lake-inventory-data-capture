@@ -18,7 +18,7 @@ source("functions.R")
 # define environment and load data
 user_list <- read.csv("./data/input/user_list.csv", stringsAsFactors = FALSE)
 
-locations <- readRDS(file = "./data/input/location.rds") %>% # load location data and make spatial
+locations <- read.csv(file = "./data/input/locations.csv") %>% # load location data and make spatial
   filter(county=="Sør-Trøndelag") 
 coordinates(locations) = ~decimalLongitude + decimalLatitude
 latlong = "+init=epsg:4326"
