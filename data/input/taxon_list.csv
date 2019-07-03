@@ -1,6 +1,31 @@
-scientificNameID,vernecularName,ScientificName
-42663,Aure,Salmo trutta
-42665,Røye,Salvelinus alpinus
-42681,Gjedde,Esox lucius
-42850,Trepigget stingsild,Gasterosteus aculeatus
-42788,Lake,Lota lota
+"","scientificName"
+"1","Salvelinus alpinus"
+"2","Coregonus lavaretus"
+"3","Gasterosteus aculeatus"
+"4","Carassius carassius"
+"5","Anguilla anguilla"
+"6","Rutilus rutilus"
+"7","Pungitius pungitius"
+"8","Phoxinus phoxinus"
+"9","Thymallus thymallus"
+"10","Esox lucius"
+"11","Lota lota"
+"12","Perca fluviatilis"
+"13","Micropterus dolomieu"
+"14","Ameiurus nebulosus"
+"15","Tinca tinca"
+"16",NA
+"17","Scardinius erythrophthalmus"
+"18","Aspius aspius"
+"19","Leuciscus cephalus"
+"20","Sander lucioperca"
+"21","Blicca bjoerkna"
+"22","Gymnocephalus cernus"
+"23","Cottus"
+"24","Leuciscus idus"
+"25","Leuciscus leuciscus"
+"26","Alburnus alburnus"
+"27","Abramis brama"
+"28","Osmerus eperlanus"
+"29","Coregonus albula"
+"30","Lampetra fluviatilis"
