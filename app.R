@@ -137,16 +137,16 @@ server <- function(input, output, session) {
       DF = hot_to_r(input$hot)
     } else {
       # edit this section to add more parameters in occurrence data...... 
-      DF = data.frame(scientificName = factor(taxon_list$ScientificName),
-                      occurrenceStatus = factor(rep("uncertain",length(taxon_list$ScientificName)), levels=c("uncertain","present","absent")),
-                      establishmentMeans = factor(rep("native", length(taxon_list$ScientificName)), levels=c("native","introduced","uncertain")),
-                      occurrenceRemarks = rep("", length(taxon_list$ScientificName)),
+      DF = data.frame(scientificName = factor(taxon_list$scientificName),
+                      occurrenceStatus = factor(rep("uncertain",length(taxon_list$scientificName)), levels=c("uncertain","present","absent")),
+                      establishmentMeans = factor(rep("native", length(taxon_list$scientificName)), levels=c("native","introduced","uncertain")),
+                      occurrenceRemarks = rep("", length(taxon_list$scientificName)),
                       stringsAsFactors = FALSE)
 
                       #date = seq(from = Sys.Date(), by = "days", length.out = length(taxon_list$ScientificName)), stringsAsFactors = FALSE)
     }
     
-    rhandsontable(DF, width = 600, height = 300) %>%
+    rhandsontable(DF, width = 600, height = 800) %>%
       hot_col("scientificName", readOnly = TRUE)
   })
   
