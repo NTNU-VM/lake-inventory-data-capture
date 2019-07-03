@@ -42,4 +42,7 @@ user_list.csv
 # output folder
 data/output
 
+# scratchpadfiles
+kladd.R
+
 
