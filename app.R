@@ -29,7 +29,7 @@ taxon_list <- read.csv("./data/input/taxon_list.csv", stringsAsFactors = FALSE) 
 m <- leaflet(locations) %>% # create leaflet for selection 
     addTiles() %>% 
     addCircleMarkers(weight = 1, layerId = 1:nrow(locations),label = locations$waterBody) %>%
-    addMiniMap()
+    addMiniMap() 
 
 #dir.create(file.path("./data/input/"), showWarnings = FALSE)
 dir.create(file.path("./data/output/"), showWarnings = FALSE)
@@ -93,6 +93,7 @@ server <- function(input, output, session) {
     session$reload()
   })
   
+  
   # check user credentials ------------------------------------------------------------
 
   
@@ -112,7 +113,7 @@ server <- function(input, output, session) {
   
   # select locations --------------------------------------------------------
     selections <- callModule(selectMod, id="test-mod", leafmap=m)
-    output$selected <- DT::renderDataTable({DT::datatable(locations@data[as.numeric(selections()$id),c(1:4)], # last part here select columns from location table to be displayed
+    output$selected <- DT::renderDataTable({DT::datatable(locations@data[as.numeric(selections()$id),c(1:6)], # last part here select columns from location table to be displayed
                                                           rownames= FALSE)})
 
   # Select occurrences --------------------------------------
